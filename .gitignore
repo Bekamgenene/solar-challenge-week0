@@ -1,0 +1,15 @@
+myenv/
+.env/
+.env.local
+
+data/
+*.csv
+*.parquet
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+
+.vscode/
+.idea/
+.DS_Store
+*.log

@@ -1,0 +1,11 @@
+{
+    "python.pythonPath": "myenv/bin/python",
+    "python.terminal.activateEnvironment": false,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    }
+}
