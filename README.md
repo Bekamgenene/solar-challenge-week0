@@ -1,4 +1,4 @@
-# Solar Challenge Week 1
+# Solar Challenge Week 0
 
 This repository contains the code and resources for the Solar Challenge Week 0 project.
 
@@ -20,7 +20,7 @@ This repository contains the code and resources for the Solar Challenge Week 0 p
 
 ```bash
 git clone <repository-url>
-cd solar-challenge-week1
+cd solar-challenge-week0
 ```
 
 2. Create and activate a virtual environment:
