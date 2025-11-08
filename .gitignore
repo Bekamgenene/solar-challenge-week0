@@ -9,6 +9,9 @@ data/
 __pycache__/
 *.py[cod]
 
+dashboard_screenshots/
+*.pkl
+
 .vscode/
 .idea/
 .DS_Store
