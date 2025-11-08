@@ -98,6 +98,6 @@ The EDA was performed for three countries: **Benin (Malanville)**, **Sierra Leon
 - Data quality and trends were comparable to the other sites.
 - Cleaning and correlation analyses provided actionable insights for site management.
 
-For detailed code and plots, see the [notebooks/eda.ipynb](notebooks/eda.ipynb).
+For detailed code and plots, see the [notebooks](notebooks).
 
 [MIT License](LICENSE)
