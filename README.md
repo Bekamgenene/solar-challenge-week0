@@ -19,7 +19,7 @@ This repository contains the code and resources for the Solar Challenge Week 0 p
 1. Clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone <https://github.com/Bekamgenene/solar-challenge-week0.git>
 cd solar-challenge-week0
 ```
 
