@@ -211,4 +211,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-_Prepared for Solar Challenge Week 0. For questions or feedback, contact [your-email@example.com]._
+_Prepared for Solar Challenge Week 0. For questions or feedback, contact [bekamgenene@gmail.com]._
