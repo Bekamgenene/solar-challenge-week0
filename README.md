@@ -175,7 +175,7 @@ _Figure 5: Relationship between wind speed and solar irradiance for Benin._
 
 ### Cross-Country Comparison
 
-![Cross-Country Comparison](images/compare/cross_country_comparison.png)
+![Cross-Country Comparison](images/compare/pairplot_GHI_DNI_DHI.png)
 _Figure 6: Comparative analysis of GHI across Benin, Togo, and Sierra Leone._
 
 Additional plots include histograms, bubble charts, and hourly trends for each country, providing a full picture of the data.
