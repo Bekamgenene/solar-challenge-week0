@@ -1,9 +1,3 @@
-"""
-Plot utilities for solar data analysis.
-
-This module provides shared functions for plotting and saving figures.
-"""
-
 import os
 import matplotlib.pyplot as plt
 
