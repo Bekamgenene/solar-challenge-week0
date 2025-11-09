@@ -1,10 +1,10 @@
+# app/main.py
 import streamlit as st
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 import os
-from io import BytesIO
-from utils import summary_statistics, get_country_metrics
+from utils import load_country_data, summary_statistics, get_country_metrics
 
 # -----------------------
 # Page & style settings
@@ -29,9 +29,9 @@ page = st.sidebar.radio(
 # -----------------------
 # Helper function
 # -----------------------
-def get_country_df(country):
-    """Load from local data folder or use uploaded CSV"""
-    uploaded_file = st.file_uploader(f"Upload {country} CSV", type="csv", key=country)
+def get_country_df(country, key_prefix=""):
+    """Load from local data folder or uploaded CSV"""
+    uploaded_file = st.file_uploader(f"Upload {country} CSV", type="csv", key=f"{key_prefix}_{country}")
     
     if uploaded_file:
         df = pd.read_csv(uploaded_file)
@@ -43,7 +43,6 @@ def get_country_df(country):
             df = pd.read_csv(file_path)
             return df
         else:
-            st.warning(f"No local CSV found for {country}. Please upload it above.")
             return pd.DataFrame()  # empty dataframe
 
 # -----------------------
@@ -56,7 +55,7 @@ if page == "Overview":
     
     This app enables dynamic exploration of solar radiation datasets across **Benin**, **Sierra Leone**, and **Togo**.
 
-    ---
+    ---    
     **Features:**
     - Compare GHI, DNI, and DHI across countries
     - Explore trends within each dataset
@@ -64,14 +63,31 @@ if page == "Overview":
     - Download results interactively
     """)
 
-    df_summary = get_country_metrics(DATA_DIR)
-    st.subheader("Average Solar Irradiance per Country")
-    st.dataframe(df_summary.set_index("country"))
+    # Upload CSVs for each country
+    df_benin = get_country_df("Benin", key_prefix="overview")
+    df_sierra = get_country_df("Sierra Leone", key_prefix="overview")
+    df_togo = get_country_df("Togo", key_prefix="overview")
 
-    fig, ax = plt.subplots(figsize=(7,5))
-    sns.barplot(data=df_summary, x="country", y="GHI", palette="viridis")
-    ax.set_title("Average GHI by Country", fontsize=13)
-    st.pyplot(fig)
+    dfs = [df for df in [df_benin, df_sierra, df_togo] if not df.empty]
+
+    if dfs:
+        # Calculate summary from uploaded data or local CSVs
+        df_summary = pd.DataFrame()
+        for df, country in zip(dfs, ["Benin","Sierra Leone","Togo"]):
+            if not df.empty:
+                avg = df[["GHI","DNI","DHI"]].mean()
+                avg["country"] = country
+                df_summary = pd.concat([df_summary, pd.DataFrame([avg])], ignore_index=True)
+
+        st.subheader("Average Solar Irradiance per Country")
+        st.dataframe(df_summary.set_index("country"))
+
+        fig, ax = plt.subplots(figsize=(7,5))
+        sns.barplot(data=df_summary, x="country", y="GHI", palette="viridis")
+        ax.set_title("Average GHI by Country", fontsize=13)
+        st.pyplot(fig)
+    else:
+        st.info("No data available. Please upload CSVs above.")
 
 # -----------------------
 # Country Comparison Page
@@ -89,7 +105,7 @@ elif page == "Country Comparison":
 
     dfs = []
     for c in countries:
-        df = get_country_df(c)
+        df = get_country_df(c, key_prefix="comparison")
         if not df.empty:
             df["country"] = c
             dfs.append(df)
@@ -118,7 +134,7 @@ elif page == "Country Comparison":
 elif page == "Explore Country":
     st.title("📈 Explore Country Data")
     country = st.selectbox("Choose a country:", ["Benin", "Sierra Leone", "Togo"])
-    df = get_country_df(country)
+    df = get_country_df(country, key_prefix="explore")
 
     if df.empty:
         st.stop()
@@ -166,7 +182,7 @@ elif page == "Analytics Lab":
 
     dfs = []
     for c in countries:
-        df = get_country_df(c)
+        df = get_country_df(c, key_prefix="analytics")
         if not df.empty:
             df["country"] = c
             dfs.append(df)
