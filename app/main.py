@@ -3,10 +3,11 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 import os
+import sys
 from io import BytesIO
 from app.utils import load_country_data, summary_statistics, get_country_metrics
 
-
+sys.path
 st.set_page_config(
     page_title="Solar Insights Dashboard 🌞",
     layout="wide",
