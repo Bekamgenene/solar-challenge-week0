@@ -55,22 +55,22 @@ The project includes an interactive Streamlit dashboard (`app/main.py`) for expl
 
 #### Solar Insights Dashboard Overview
 
-![Solar Insights Dashboard](../dashboard_screenshots/Solar-Insights-Dashboard.jpeg)
+![Solar Insights Dashboard](dashboard_screenshots/Solar-Insights-Dashboard.png)
 _Figure: Main dashboard interface with navigation and overview metrics._
 
 #### Cross-Country Comparison
 
-![Cross-Country Comparison](../dashboard_screenshots/Cross-Country-Comparison.jpeg)
+![Cross-Country Comparison](dashboard_screenshots/Cross-Country-Comparison.png)
 _Figure: Comparison of irradiance distributions across Benin, Togo, and Sierra Leone._
 
 #### Explore Country Data
 
-![Explore Country Data](../dashboard_screenshots/Explore-Country-Data.jpeg)
+![Explore Country Data](dashboard_screenshots/Explore-Country-Data.png)
 _Figure: Detailed exploration of country-specific data with time series and correlations._
 
 #### Analytics Lab
 
-![Analytics Lab](../dashboard_screenshots/Dive-deeper-into-the-data-visualize-relationships-and-compare-performance.jpeg)
+![Analytics Lab](dashboard_screenshots/Dive-deeper-into-the-data-visualize-relationships-and-compare-performance.png)
 _Figure: Advanced analytics with scatter plots and global correlations._
 
 ## 🛠️ Installation
