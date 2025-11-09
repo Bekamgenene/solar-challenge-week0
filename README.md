@@ -55,22 +55,22 @@ The project includes an interactive Streamlit dashboard (`app/main.py`) for expl
 
 #### Solar Insights Dashboard Overview
 
-![Solar Insights Dashboard](../dashboard_screenshots/Solar%20Insights%20Dashboard.jpeg)
+![Solar Insights Dashboard](../dashboard_screenshots/Solar-Insights-Dashboard.jpeg)
 _Figure: Main dashboard interface with navigation and overview metrics._
 
 #### Cross-Country Comparison
 
-![Cross-Country Comparison](../dashboard_screenshots/Cross-Country%20Comparison.jpeg)
+![Cross-Country Comparison](../dashboard_screenshots/Cross-Country-Comparison.jpeg)
 _Figure: Comparison of irradiance distributions across Benin, Togo, and Sierra Leone._
 
 #### Explore Country Data
 
-![Explore Country Data](../dashboard_screenshots/Explore%20Country%20Data.jpeg)
+![Explore Country Data](../dashboard_screenshots/Explore-Country-Data.jpeg)
 _Figure: Detailed exploration of country-specific data with time series and correlations._
 
 #### Analytics Lab
 
-![Analytics Lab](../dashboard_screenshots/Dive%20deeper%20into%20the%20data%20—%20visualize%20relationships%20and%20compare%20performance..jpeg)
+![Analytics Lab](../dashboard_screenshots/Dive-deeper-into-the-data-visualize-relationships-and-compare-performance.jpeg)
 _Figure: Advanced analytics with scatter plots and global correlations._
 
 ## 🛠️ Installation
@@ -78,7 +78,7 @@ _Figure: Advanced analytics with scatter plots and global correlations._
 1. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/your-username/solar-challenge-week0.git
+   git clone https://github.com/bekamgenene/solar-challenge-week0.git
    cd solar-challenge-week0
    ```
 
@@ -93,6 +93,7 @@ _Figure: Advanced analytics with scatter plots and global correlations._
    - Place the raw data files in the `../data/` directory:
      - `benin-malanville.csv` for Benin data
      - `togo-dapaong_qc.csv` for Togo data
+     - 'sierraleone_bumbune.csv' for sierraleoen data
    - The notebooks will generate cleaned data and images in `../data/` and `../images/` respectively.
 
 ## 🚀 Usage
@@ -211,4 +212,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-_Prepared for Solar Challenge Week 0. For questions or feedback, contact [bekamgenene@gmail.com]._
+_Prepared for Solar Challenge Week 0. For questions or feedback, contact bekamgenene@gmail.com_
