@@ -118,7 +118,7 @@ The datasets contain meteorological and solar irradiance measurements from solar
 
 - **Benin (Malanville)**: Data from a station in Benin, including GHI, DNI, DHI, module temperatures, wind speed, humidity, etc.
 - **Togo (Dapaong)**: Similar data from Togo, with quality-controlled measurements.
-- **Sierra Leone**: Additional data for comparative analysis, with similar meteorological measurements.
+- **Sierra Leone (bumbuna)**: Additional data for comparative analysis, with similar meteorological measurements.
 
 Key columns:
 
