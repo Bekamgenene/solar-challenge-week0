@@ -31,12 +31,31 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## 📝 Basic Usage
+## 📝 How to Run Cleaning & EDA Scripts
 
-- Run exploratory data analysis notebooks from the `notebooks/` folder.
-- To export cleaned data, use scripts/notebooks; **never commit raw or cleaned CSVs** (see `.gitignore`).
-- Visualizations and summary tables are generated in Jupyter notebooks.
-- To check CI status, look for runs triggered by updates to the repo (see `.github/workflows/ci.yml`).
+### Run Data Cleaning Example
+To clean raw country data and export a cleaned CSV:
+
+```bash
+python scripts/clean_benin.py data/benin_raw.csv data/benin_clean.csv
+python scripts/clean_togo.py data/togo_raw.csv data/togo_clean.csv
+python scripts/clean_sierra_leone.py data/sierra_leone_raw.csv data/sierraleone_clean.csv
+```
+
+### Run Exploratory Analysis (Jupyter Notebook)
+Open and run the EDA for a country:
+```bash
+jupyter notebook notebooks/benin_eda.ipynb
+# or for Togo/Sierra Leone:
+jupyter notebook notebooks/togo_eda.ipynb
+jupyter notebook notebooks/sierraleone_eda.ipynb
+```
+
+### Run Cross-Country Comparison
+```bash
+jupyter notebook notebooks/compare_countries.ipynb
+```
+
 
 ## 📂 Recommended Folder Structure
 
@@ -52,6 +71,12 @@ pip install -r requirements.txt
 ├── README.md                    # Setup, usage & project overview
 ```
 
+## 🔗 Useful Script Links
+- [scripts/clean_benin.py](scripts/clean_benin.py)
+- [scripts/clean_togo.py](scripts/clean_togo.py)
+- [scripts/clean_sierra_leone.py](scripts/clean_sierra_leone.py)
+- [scripts/README.md](scripts/README.md): Details for usage and options
+
 ## 🤖 Continuous Integration
 
 This repository uses GitHub Actions. On each push or PR:
@@ -59,7 +84,7 @@ This repository uses GitHub Actions. On each push or PR:
 - Tests are run (if available)
 - Results are reported under the Actions tab
 
-See `.github/workflows/ci.yml` for details.
+See [.github/workflows/ci.yml](.github/workflows/ci.yml) for details.
 
 ## 📌 Repository Best Practices
 
@@ -70,9 +95,8 @@ See `.github/workflows/ci.yml` for details.
 
 ## 📒 EDA Outline & Insights
 
-See analysis notebooks in `notebooks/`.  
-Each country has its own EDA notebook, covering data profiling, cleaning, and reporting.  
-Cross-country comparison and summary findings are in `notebooks/compare_countries.ipynb`.
+- Country EDA: [notebooks/benin_eda.ipynb](notebooks/benin_eda.ipynb), [notebooks/togo_eda.ipynb](notebooks/togo_eda.ipynb), [notebooks/sierraleone_eda.ipynb](notebooks/sierraleone_eda.ipynb)
+- Cross-country comparison: [notebooks/compare_countries.ipynb](notebooks/compare_countries.ipynb)
 
 ## 📞 Support & Questions
 
