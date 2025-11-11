@@ -113,12 +113,21 @@ Note: Ensure file paths are correct relative to the notebook locations. Adjust i
 
 ## Data Cleaning & EDA
 
-- Cleaned data exported to: `data/processed/clean.csv`
+- Cleaned data exported to: `data/benin_clean.csv`
 - EDA visualizations saved in: `image/`
-    - Heatmap: `image/./heatmap_correlations.png`
-    - Scatter chart: `image/./scatter_age_income.png`
-    - Bubble chart: `image/./bubble_size_power.png`
-- To reproduce cleaning and visualizations, run: 
+    - Heatmap: `image/benin/heatmap_correlations.png`
+    - Scatter chart: `image/benin/scatter_age_income.png`
+    - Bubble chart: `image/benin/bubble_size_power.png`
+- To reproduce cleaning and visualizations, run:
+- # Solar Challenge Week 0 - EDA
+
+## Data Exports
+
+- **Cleaned data:** Exported to `data//sierraleone_clean.csv`
+
+## Visual Outputs
+
+- All EDA figures (heatmaps, scatter plots, bubble charts, etc.) are saved in the `image/` directory.
 
 ## Key Findings
 
@@ -129,7 +138,6 @@ Note: Ensure file paths are correct relative to the notebook locations. Adjust i
 - **Statistical Significance**: Differences in GHI across countries are statistically significant (based on ANOVA/Kruskal-Wallis).
 
 These insights inform site selection and feasibility studies for solar projects.
-
 ## Notes and Assumptions
 
 - Data is assumed to be in CSV format with consistent column names (e.g., 'GHI', 'Timestamp').
@@ -139,4 +147,5 @@ These insights inform site selection and feasibility studies for solar projects.
 - Analysis focuses on available columns; missing columns are skipped gracefully.
 
 For questions or contributions, refer to the project repository or contact the maintainers.
+
 
