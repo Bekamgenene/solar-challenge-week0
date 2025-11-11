@@ -71,11 +71,7 @@ jupyter notebook notebooks/compare_countries.ipynb
 ├── README.md                    # Setup, usage & project overview
 ```
 
-## 🔗 Useful Script Links
-- [scripts/clean_benin.py](scripts/clean_benin.py)
-- [scripts/clean_togo.py](scripts/clean_togo.py)
-- [scripts/clean_sierra_leone.py](scripts/clean_sierra_leone.py)
-- [scripts/README.md](scripts/README.md): Details for usage and options
+
 
 ## 🤖 Continuous Integration
 
